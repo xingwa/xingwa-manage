@@ -1,0 +1,7 @@
+G:\npm\node.js\xingwa-manage\xingwaMange\xingwaMange\bin\Debug\xingwaMange.exe
+G:\npm\node.js\xingwa-manage\xingwaMange\xingwaMange\bin\Debug\xingwaMange.pdb
+G:\npm\node.js\xingwa-manage\xingwaMange\xingwaMange\obj\Debug\xingwaMange.csprojResolveAssemblyReference.cache
+G:\npm\node.js\xingwa-manage\xingwaMange\xingwaMange\obj\Debug\xingwaMange.Properties.Resources.resources
+G:\npm\node.js\xingwa-manage\xingwaMange\xingwaMange\obj\Debug\xingwaMange.csproj.GenerateResource.Cache
+G:\npm\node.js\xingwa-manage\xingwaMange\xingwaMange\obj\Debug\xingwaMange.exe
+G:\npm\node.js\xingwa-manage\xingwaMange\xingwaMange\obj\Debug\xingwaMange.pdb
