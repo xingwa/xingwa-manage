@@ -1,0 +1,5 @@
+G:\VS\digFaimilys\managementBackend\bin\Release\managementBackend.dll
+G:\VS\digFaimilys\managementBackend\bin\Release\managementBackend.pdb
+G:\VS\digFaimilys\managementBackend\obj\Release\managementBackend.csproj.CoreCompileInputs.cache
+G:\VS\digFaimilys\managementBackend\obj\Release\managementBackend.dll
+G:\VS\digFaimilys\managementBackend\obj\Release\managementBackend.pdb

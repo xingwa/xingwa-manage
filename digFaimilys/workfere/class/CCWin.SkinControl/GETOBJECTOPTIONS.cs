@@ -1,0 +1,12 @@
+using System;
+namespace xingwaWinFormUI.SkinControl
+{
+	public enum GETOBJECTOPTIONS
+	{
+		REO_GETOBJ_NO_INTERFACES,
+		REO_GETOBJ_POLEOBJ,
+		REO_GETOBJ_PSTG,
+		REO_GETOBJ_POLESITE = 4,
+		REO_GETOBJ_ALL_INTERFACES = 7
+	}
+}

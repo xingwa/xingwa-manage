@@ -1,0 +1,12 @@
+using System;
+namespace xingwaWinFormUI.Win32.Com
+{
+	public enum OLECMDID
+	{
+		OLECMDID_SAVEAS = 4,
+		OLECMDID_PRINT = 6,
+		OLECMDID_PRINTPREVIEW,
+		OLECMDID_PAGESETUP,
+		OLECMDID_PROPERTIES = 10
+	}
+}

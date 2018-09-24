@@ -1,0 +1,13 @@
+using System;
+namespace xingwaWinFormUI.Win32.Com
+{
+	public enum OLECMDF
+	{
+		OLECMDF_SUPPORTED = 1,
+		OLECMDF_ENABLED,
+		OLECMDF_LATCHED = 4,
+		OLECMDF_NINCHED = 8,
+		OLECMDF_INVISIBLE = 16,
+		OLECMDF_DEFHIDEONCTXTMENU = 32
+	}
+}

@@ -1,0 +1,14 @@
+G:\VS\digFaimilys\workfere\obj\Release\workfere.Properties.Resources.resources
+G:\VS\digFaimilys\workfere\obj\Release\workfere.csproj.GenerateResource.Cache
+G:\VS\digFaimilys\workfere\obj\Release\workfere.csproj.CoreCompileInputs.cache
+G:\VS\digFaimilys\workfere\bin\Release\Resources\frameBorderEffect_normalDraw.png
+G:\VS\digFaimilys\workfere\bin\Release\Resources\frameBorderEffect_mouseDownDraw.png
+G:\VS\digFaimilys\workfere\bin\Release\Resources\Qme.png
+G:\VS\digFaimilys\workfere\bin\Release\Resources\away.png
+G:\VS\digFaimilys\workfere\bin\Release\Resources\Norml.png
+G:\VS\digFaimilys\workfere\bin\Release\Resources\1_100.gif
+G:\VS\digFaimilys\workfere\bin\Release\workfere.dll
+G:\VS\digFaimilys\workfere\bin\Release\workfere.pdb
+G:\VS\digFaimilys\workfere\obj\Release\workfere.dll
+G:\VS\digFaimilys\workfere\obj\Release\workfere.pdb
+G:\VS\digFaimilys\workfere\obj\Release\iform.AppForm.resources

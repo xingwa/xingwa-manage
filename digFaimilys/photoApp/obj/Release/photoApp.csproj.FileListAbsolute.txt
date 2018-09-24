@@ -1,0 +1,7 @@
+G:\VS\digFaimilys\photoApp\bin\Release\photoApp.dll
+G:\VS\digFaimilys\photoApp\bin\Release\photoApp.pdb
+G:\VS\digFaimilys\photoApp\obj\Release\photoApp.csproj.CoreCompileInputs.cache
+G:\VS\digFaimilys\photoApp\obj\Release\photoApp.dll
+G:\VS\digFaimilys\photoApp\obj\Release\photoApp.pdb
+G:\VS\digFaimilys\photoApp\obj\Release\photoApp.Properties.Resources.resources
+G:\VS\digFaimilys\photoApp\obj\Release\photoApp.csproj.GenerateResource.Cache
