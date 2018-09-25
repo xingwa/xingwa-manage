@@ -33,22 +33,21 @@ namespace managementBackend
             this.statusStripDiv = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.divMain = new System.Windows.Forms.Panel();
-            this.div = new System.Windows.Forms.Panel();
-            this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
-            this.expandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
-            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
+            this.div = new System.Windows.Forms.Panel();
+            this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
+            this.expandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
+            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.topDiv = new DevComponents.DotNetBar.PanelEx();
             this.statusStripDiv.SuspendLayout();
             this.divMain.SuspendLayout();
-            this.div.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
-            this.superTabControlPanel1.SuspendLayout();
+            this.div.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStripDiv
@@ -75,6 +74,79 @@ namespace managementBackend
             this.divMain.Name = "divMain";
             this.divMain.Size = new System.Drawing.Size(1022, 544);
             this.divMain.TabIndex = 1;
+            // 
+            // superTabControl1
+            // 
+            this.superTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.superTabControl1.BackColor = System.Drawing.Color.White;
+            this.superTabControl1.CausesValidation = false;
+            this.superTabControl1.CloseButtonOnTabsAlwaysDisplayed = false;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.superTabControl1.ControlBox.CloseBox.Name = "";
+            // 
+            // 
+            // 
+            this.superTabControl1.ControlBox.MenuBox.Name = "";
+            this.superTabControl1.ControlBox.Name = "";
+            this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.superTabControl1.ControlBox.MenuBox,
+            this.superTabControl1.ControlBox.CloseBox});
+            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
+            this.superTabControl1.ForeColor = System.Drawing.Color.Black;
+            this.superTabControl1.Location = new System.Drawing.Point(2, 3);
+            this.superTabControl1.Name = "superTabControl1";
+            this.superTabControl1.ReorderTabsEnabled = true;
+            this.superTabControl1.SelectedTabFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.superTabControl1.SelectedTabIndex = 0;
+            this.superTabControl1.Size = new System.Drawing.Size(1015, 463);
+            this.superTabControl1.TabFont = new System.Drawing.Font("微软雅黑", 9F);
+            this.superTabControl1.TabIndex = 0;
+            this.superTabControl1.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.superTabItem1,
+            this.superTabItem2});
+            this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.OneNote2007;
+            this.superTabControl1.Text = "superTabControl1";
+            // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 38);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(1015, 425);
+            this.superTabControlPanel1.TabIndex = 1;
+            this.superTabControlPanel1.TabItem = this.superTabItem1;
+            // 
+            // superTabItem1
+            // 
+            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
+            this.superTabItem1.GlobalItem = false;
+            this.superTabItem1.Name = "superTabItem1";
+            this.superTabItem1.Symbol = "";
+            this.superTabItem1.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.superTabItem1.Text = "superTabItem1";
+            // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 38);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(1015, 425);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.superTabItem2;
+            // 
+            // superTabItem2
+            // 
+            this.superTabItem2.AttachedControl = this.superTabControlPanel2;
+            this.superTabItem2.GlobalItem = false;
+            this.superTabItem2.Name = "superTabItem2";
+            this.superTabItem2.Text = "superTabItem2";
             // 
             // div
             // 
@@ -159,80 +231,6 @@ namespace managementBackend
             this.panelEx1.TabIndex = 0;
             this.panelEx1.Text = "Click to collapse12";
             // 
-            // superTabControl1
-            // 
-            this.superTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.superTabControl1.BackColor = System.Drawing.Color.White;
-            this.superTabControl1.CausesValidation = false;
-            this.superTabControl1.CloseButtonOnTabsAlwaysDisplayed = false;
-            // 
-            // 
-            // 
-            // 
-            // 
-            // 
-            this.superTabControl1.ControlBox.CloseBox.Name = "";
-            // 
-            // 
-            // 
-            this.superTabControl1.ControlBox.MenuBox.Name = "";
-            this.superTabControl1.ControlBox.Name = "";
-            this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.superTabControl1.ControlBox.MenuBox,
-            this.superTabControl1.ControlBox.CloseBox});
-            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
-            this.superTabControl1.ForeColor = System.Drawing.Color.Black;
-            this.superTabControl1.Location = new System.Drawing.Point(2, 3);
-            this.superTabControl1.Name = "superTabControl1";
-            this.superTabControl1.ReorderTabsEnabled = true;
-            this.superTabControl1.SelectedTabFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
-            this.superTabControl1.SelectedTabIndex = 0;
-            this.superTabControl1.Size = new System.Drawing.Size(1015, 463);
-            this.superTabControl1.TabFont = new System.Drawing.Font("微软雅黑", 9F);
-            this.superTabControl1.TabIndex = 0;
-            this.superTabControl1.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.superTabItem1,
-            this.superTabItem2});
-            this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
-            this.superTabControl1.Text = "superTabControl1";
-            // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Controls.Add(this.div);
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 38);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(1015, 425);
-            this.superTabControlPanel1.TabIndex = 1;
-            this.superTabControlPanel1.TabItem = this.superTabItem1;
-            // 
-            // superTabItem1
-            // 
-            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
-            this.superTabItem1.GlobalItem = false;
-            this.superTabItem1.Name = "superTabItem1";
-            this.superTabItem1.Symbol = "";
-            this.superTabItem1.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.superTabItem1.Text = "superTabItem1";
-            // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 38);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(1022, 506);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.superTabItem2;
-            // 
-            // superTabItem2
-            // 
-            this.superTabItem2.AttachedControl = this.superTabControlPanel2;
-            this.superTabItem2.GlobalItem = false;
-            this.superTabItem2.Name = "superTabItem2";
-            this.superTabItem2.Text = "superTabItem2";
-            // 
             // topDiv
             // 
             this.topDiv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -264,10 +262,9 @@ namespace managementBackend
             this.statusStripDiv.ResumeLayout(false);
             this.statusStripDiv.PerformLayout();
             this.divMain.ResumeLayout(false);
-            this.div.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
-            this.superTabControlPanel1.ResumeLayout(false);
+            this.div.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
