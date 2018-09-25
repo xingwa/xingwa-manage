@@ -12,3 +12,17 @@ G:\VS\digFaimilys\workfere\bin\Release\workfere.pdb
 G:\VS\digFaimilys\workfere\obj\Release\workfere.dll
 G:\VS\digFaimilys\workfere\obj\Release\workfere.pdb
 G:\VS\digFaimilys\workfere\obj\Release\iform.AppForm.resources
+D:\xingwa-manage\digFaimilys\workfere\bin\Release\Resources\frameBorderEffect_normalDraw.png
+D:\xingwa-manage\digFaimilys\workfere\bin\Release\Resources\frameBorderEffect_mouseDownDraw.png
+D:\xingwa-manage\digFaimilys\workfere\bin\Release\Resources\Qme.png
+D:\xingwa-manage\digFaimilys\workfere\bin\Release\Resources\away.png
+D:\xingwa-manage\digFaimilys\workfere\bin\Release\Resources\Norml.png
+D:\xingwa-manage\digFaimilys\workfere\bin\Release\Resources\1_100.gif
+D:\xingwa-manage\digFaimilys\workfere\bin\Release\workfere.dll
+D:\xingwa-manage\digFaimilys\workfere\bin\Release\workfere.pdb
+D:\xingwa-manage\digFaimilys\workfere\obj\Release\iform.AppForm.resources
+D:\xingwa-manage\digFaimilys\workfere\obj\Release\workfere.Properties.Resources.resources
+D:\xingwa-manage\digFaimilys\workfere\obj\Release\workfere.csproj.GenerateResource.cache
+D:\xingwa-manage\digFaimilys\workfere\obj\Release\workfere.csproj.CoreCompileInputs.cache
+D:\xingwa-manage\digFaimilys\workfere\obj\Release\workfere.dll
+D:\xingwa-manage\digFaimilys\workfere\obj\Release\workfere.pdb

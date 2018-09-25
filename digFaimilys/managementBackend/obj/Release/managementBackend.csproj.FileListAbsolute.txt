@@ -3,3 +3,17 @@ G:\VS\digFaimilys\managementBackend\bin\Release\managementBackend.pdb
 G:\VS\digFaimilys\managementBackend\obj\Release\managementBackend.csproj.CoreCompileInputs.cache
 G:\VS\digFaimilys\managementBackend\obj\Release\managementBackend.dll
 G:\VS\digFaimilys\managementBackend\obj\Release\managementBackend.pdb
+D:\xingwa-manage\digFaimilys\managementBackend\bin\Release\managementBackend.dll
+D:\xingwa-manage\digFaimilys\managementBackend\bin\Release\managementBackend.pdb
+D:\xingwa-manage\digFaimilys\managementBackend\bin\Release\photoApp.dll
+D:\xingwa-manage\digFaimilys\managementBackend\bin\Release\workfere.dll
+D:\xingwa-manage\digFaimilys\managementBackend\bin\Release\photoApp.pdb
+D:\xingwa-manage\digFaimilys\managementBackend\bin\Release\workfere.pdb
+D:\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.csproj.CoreCompileInputs.cache
+D:\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.csproj.CopyComplete
+D:\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.dll
+D:\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.pdb
+D:\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.backend.resources
+D:\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.csproj.GenerateResource.cache
+D:\xingwa-manage\digFaimilys\managementBackend\bin\Release\DevComponents.DotNetBar2.dll
+D:\xingwa-manage\digFaimilys\managementBackend\bin\Release\DevComponents.DotNetBar2.xml

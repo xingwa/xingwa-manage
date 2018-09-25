@@ -5,3 +5,10 @@ G:\VS\digFaimilys\photoApp\obj\Release\photoApp.dll
 G:\VS\digFaimilys\photoApp\obj\Release\photoApp.pdb
 G:\VS\digFaimilys\photoApp\obj\Release\photoApp.Properties.Resources.resources
 G:\VS\digFaimilys\photoApp\obj\Release\photoApp.csproj.GenerateResource.Cache
+D:\xingwa-manage\digFaimilys\photoApp\bin\Release\photoApp.dll
+D:\xingwa-manage\digFaimilys\photoApp\bin\Release\photoApp.pdb
+D:\xingwa-manage\digFaimilys\photoApp\obj\Release\photoApp.Properties.Resources.resources
+D:\xingwa-manage\digFaimilys\photoApp\obj\Release\photoApp.csproj.GenerateResource.cache
+D:\xingwa-manage\digFaimilys\photoApp\obj\Release\photoApp.csproj.CoreCompileInputs.cache
+D:\xingwa-manage\digFaimilys\photoApp\obj\Release\photoApp.dll
+D:\xingwa-manage\digFaimilys\photoApp\obj\Release\photoApp.pdb

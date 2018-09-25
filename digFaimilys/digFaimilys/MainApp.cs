@@ -4,9 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace digFaimilys
 {
@@ -39,10 +40,12 @@ namespace digFaimilys
                 imgIcoDiv.Location = new System.Drawing.Point(0, 0);
                 imgIcoDiv.MouseBack = null;
                 imgIcoDiv.Name = "imgIco";
+                imgIcoDiv.Tag = i;
                 imgIcoDiv.NormlBack = null;
                 imgIcoDiv.Radius = 2;
                 imgIcoDiv.Size = new System.Drawing.Size(55, 45);
                 imgIcoDiv.TabIndex = 1;
+                imgIcoDiv.Click += ImgIcoDiv_Click;
                 // 
                 // labelText
                 // 
@@ -57,6 +60,7 @@ namespace digFaimilys
                 labelTextFont.Size = new System.Drawing.Size(55, 15);
                 labelTextFont.TabIndex = 2;
                 labelTextFont.Text = "数字家"+i;
+
 
 
                 xingwaWinFormUI.SkinControl.SkinPanel icoDiv = new xingwaWinFormUI.SkinControl.SkinPanel();
@@ -89,6 +93,44 @@ namespace digFaimilys
 
             }
 
+        }
+
+        private void ImgIcoDiv_Click(object sender, EventArgs e)
+        {
+            xingwaWinFormUI.SkinControl.SkinPanel obj = (xingwaWinFormUI.SkinControl.SkinPanel)sender;
+            if ( int.Parse( obj.Tag.ToString()) == 2)
+            {
+            
+
+                string dllPath = "managementBackend.dll";
+                Assembly assembly = Assembly.LoadFile(Environment.CurrentDirectory + "\\" + dllPath);
+                Type type = assembly.GetType("managementBackend.backend");
+                object o = Activator.CreateInstance(type);
+                MethodInfo method = type.GetMethod("winformShow");
+                method.Invoke(o, null);
+
+
+                //                assembly asm = assembly.loadfrom(appdomain.currentdomain.basedirectory + "/declaredll/yundoutaxlib.dll");////我们要调用的dll文件路径
+                //                                                                                                                         //加载dll后,需要使用dll中某类.
+                //                type t = asm.gettype("namespace.classname");//获取类名，必须 命名空间+类名  
+
+                //                //实例化类型
+                //                object o = activator.createinstance(t);
+
+                //                //得到要调用的某类型的方法
+                //                methodinfo method = t.getmethod("functionname");//functionname:方法名字
+
+                //                object[] obj =
+                //                {
+                //     parameters[0].taxpayername,
+                //     parameters[0].taxpayertaxcode,
+                //     parameters[0].capassword
+                //};
+                //                //对方法进行调用
+                //                var keydata = method.invoke(o, obj);//param为方法参数object数组
+
+
+            }
         }
     }
 }
