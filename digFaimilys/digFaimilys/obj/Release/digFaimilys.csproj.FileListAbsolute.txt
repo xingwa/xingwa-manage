@@ -87,3 +87,4 @@ G:\VS\xingwa-manage\digFaimilys\digFaimilys\obj\Release\zh-CN\digFaimilys.resour
 G:\VS\xingwa-manage\digFaimilys\digFaimilys\obj\Release\zh-TW\digFaimilys.resources.dll
 G:\VS\xingwa-manage\digFaimilys\digFaimilys\obj\Release\digFaimilys.exe
 G:\VS\xingwa-manage\digFaimilys\digFaimilys\obj\Release\digFaimilys.pdb
+D:\xingwa-manage\digFaimilys\digFaimilys\obj\Release\digFaimilys.csprojAssemblyReference.cache

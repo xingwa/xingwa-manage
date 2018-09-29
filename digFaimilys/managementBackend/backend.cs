@@ -23,13 +23,16 @@ namespace managementBackend
         private DevComponents.DotNetBar.PanelEx panelEx1;
         private DevComponents.DotNetBar.ExpandableSplitter expandableSplitter1;
         private DevComponents.DotNetBar.PanelEx topDiv;
-        private xingwaWinFormUI.SkinControl.SkinPanel skinPanel1;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel4;
         private DevComponents.DotNetBar.SuperTabItem superTabItem4;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel3;
         private DevComponents.DotNetBar.SuperTabItem superTabItem3;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel5;
         private DevComponents.DotNetBar.SuperTabItem superTabItem5;
+        private System.Windows.Forms.TreeView treeView1;
+        private xingwaWinFormUI.SkinControl.SkinLabel skinLabel1;
+        private DevComponents.DotNetBar.Controls.SymbolBox symbolBox1;
+        private DevComponents.DotNetBar.Controls.Line line1;
         private DevComponents.DotNetBar.PanelEx panelEx3;
 
 
@@ -37,6 +40,26 @@ namespace managementBackend
 
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("节点1");
+            System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("节点2");
+            System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("节点3");
+            System.Windows.Forms.TreeNode treeNode103 = new System.Windows.Forms.TreeNode("C2C买卖管理", new System.Windows.Forms.TreeNode[] {
+            treeNode100,
+            treeNode101,
+            treeNode102});
+            System.Windows.Forms.TreeNode treeNode104 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode105 = new System.Windows.Forms.TreeNode("节点6");
+            System.Windows.Forms.TreeNode treeNode106 = new System.Windows.Forms.TreeNode("节点7");
+            System.Windows.Forms.TreeNode treeNode107 = new System.Windows.Forms.TreeNode("节点8");
+            System.Windows.Forms.TreeNode treeNode108 = new System.Windows.Forms.TreeNode("节点9");
+            System.Windows.Forms.TreeNode treeNode109 = new System.Windows.Forms.TreeNode("节点10");
+            System.Windows.Forms.TreeNode treeNode110 = new System.Windows.Forms.TreeNode("节点4", new System.Windows.Forms.TreeNode[] {
+            treeNode104,
+            treeNode105,
+            treeNode106,
+            treeNode107,
+            treeNode108,
+            treeNode109});
             this.statusStripDiv = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.divMain = new System.Windows.Forms.Panel();
@@ -46,23 +69,27 @@ namespace managementBackend
             this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
             this.expandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabItem3 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabItem5 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabItem4 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
             this.topDiv = new DevComponents.DotNetBar.PanelEx();
-            this.skinPanel1 = new xingwaWinFormUI.SkinControl.SkinPanel();
-            this.superTabItem3 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.superTabItem4 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.superTabItem5 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.skinLabel1 = new xingwaWinFormUI.SkinControl.SkinLabel();
+            this.symbolBox1 = new DevComponents.DotNetBar.Controls.SymbolBox();
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
             this.statusStripDiv.SuspendLayout();
             this.divMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
             this.div.SuspendLayout();
+            this.panelEx1.SuspendLayout();
             this.topDiv.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,10 +142,10 @@ namespace managementBackend
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.superTabControlPanel5);
             this.superTabControl1.Controls.Add(this.superTabControlPanel4);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.ForeColor = System.Drawing.Color.Black;
             this.superTabControl1.Location = new System.Drawing.Point(2, 3);
             this.superTabControl1.Name = "superTabControl1";
@@ -216,6 +243,7 @@ namespace managementBackend
             // 
             // panelEx1
             // 
+            this.panelEx1.Controls.Add(this.treeView1);
             this.panelEx1.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEx1.Location = new System.Drawing.Point(0, 0);
@@ -232,14 +260,100 @@ namespace managementBackend
             this.panelEx1.TabIndex = 0;
             this.panelEx1.Text = "Click to collapse12";
             // 
+            // treeView1
+            // 
+            this.treeView1.BackColor = System.Drawing.Color.White;
+            this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeView1.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.treeView1.Location = new System.Drawing.Point(6, 6);
+            this.treeView1.Name = "treeView1";
+            treeNode100.Name = "节点1";
+            treeNode100.Text = "节点1";
+            treeNode101.Name = "节点2";
+            treeNode101.Text = "节点2";
+            treeNode102.Name = "节点3";
+            treeNode102.Text = "节点3";
+            treeNode103.Name = "节点0";
+            treeNode103.Text = "C2C买卖管理";
+            treeNode104.Name = "节点5";
+            treeNode104.Text = "节点5";
+            treeNode105.Name = "节点6";
+            treeNode105.Text = "节点6";
+            treeNode106.Name = "节点7";
+            treeNode106.Text = "节点7";
+            treeNode107.Name = "节点8";
+            treeNode107.Text = "节点8";
+            treeNode108.Name = "节点9";
+            treeNode108.Text = "节点9";
+            treeNode109.Name = "节点10";
+            treeNode109.Text = "节点10";
+            treeNode110.Name = "节点4";
+            treeNode110.Text = "节点4";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode103,
+            treeNode110});
+            this.treeView1.ShowNodeToolTips = true;
+            this.treeView1.Size = new System.Drawing.Size(140, 355);
+            this.treeView1.TabIndex = 0;
+            // 
             // superTabItem1
             // 
             this.superTabItem1.AttachedControl = this.superTabControlPanel1;
             this.superTabItem1.GlobalItem = false;
             this.superTabItem1.Name = "superTabItem1";
             this.superTabItem1.Symbol = "";
-            this.superTabItem1.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.superTabItem1.Text = "个人中心";
+            // 
+            // superTabControlPanel3
+            // 
+            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel3.Name = "superTabControlPanel3";
+            this.superTabControlPanel3.Size = new System.Drawing.Size(1015, 617);
+            this.superTabControlPanel3.TabIndex = 0;
+            this.superTabControlPanel3.TabItem = this.superTabItem3;
+            // 
+            // superTabItem3
+            // 
+            this.superTabItem3.AttachedControl = this.superTabControlPanel3;
+            this.superTabItem3.GlobalItem = false;
+            this.superTabItem3.Name = "superTabItem3";
+            this.superTabItem3.Symbol = "";
+            this.superTabItem3.Text = "内容管理";
+            // 
+            // superTabControlPanel5
+            // 
+            this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel5.Name = "superTabControlPanel5";
+            this.superTabControlPanel5.Size = new System.Drawing.Size(902, 662);
+            this.superTabControlPanel5.TabIndex = 0;
+            this.superTabControlPanel5.TabItem = this.superTabItem5;
+            // 
+            // superTabItem5
+            // 
+            this.superTabItem5.AttachedControl = this.superTabControlPanel5;
+            this.superTabItem5.GlobalItem = false;
+            this.superTabItem5.Name = "superTabItem5";
+            this.superTabItem5.Symbol = "";
+            this.superTabItem5.Text = "日志管理";
+            // 
+            // superTabControlPanel4
+            // 
+            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel4.Name = "superTabControlPanel4";
+            this.superTabControlPanel4.Size = new System.Drawing.Size(1015, 425);
+            this.superTabControlPanel4.TabIndex = 0;
+            this.superTabControlPanel4.TabItem = this.superTabItem4;
+            // 
+            // superTabItem4
+            // 
+            this.superTabItem4.AttachedControl = this.superTabControlPanel4;
+            this.superTabItem4.GlobalItem = false;
+            this.superTabItem4.Name = "superTabItem4";
+            this.superTabItem4.Symbol = "";
+            this.superTabItem4.Text = "统计系统";
             // 
             // superTabControlPanel2
             // 
@@ -264,84 +378,58 @@ namespace managementBackend
             | System.Windows.Forms.AnchorStyles.Right)));
             this.topDiv.CanvasColor = System.Drawing.SystemColors.Control;
             this.topDiv.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
-            this.topDiv.Controls.Add(this.skinPanel1);
+            this.topDiv.Controls.Add(this.line1);
+            this.topDiv.Controls.Add(this.skinLabel1);
+            this.topDiv.Controls.Add(this.symbolBox1);
             this.topDiv.DisabledBackColor = System.Drawing.Color.Empty;
             this.topDiv.Location = new System.Drawing.Point(1, 23);
             this.topDiv.Name = "topDiv";
             this.topDiv.Size = new System.Drawing.Size(1022, 46);
             this.topDiv.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.topDiv.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(150)))), ((int)(((byte)(178)))));
-            this.topDiv.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(150)))), ((int)(((byte)(178)))));
+            this.topDiv.Style.BackColor2.Color = System.Drawing.Color.White;
             this.topDiv.Style.BorderColor.Color = System.Drawing.Color.Transparent;
             this.topDiv.Style.BorderWidth = 0;
             this.topDiv.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.topDiv.Style.GradientAngle = 90;
             this.topDiv.TabIndex = 2;
             // 
-            // skinPanel1
+            // skinLabel1
             // 
-            this.skinPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.skinPanel1.ControlState = xingwaWinFormUI.SkinClass.ControlState.Normal;
-            this.skinPanel1.DownBack = null;
-            this.skinPanel1.Location = new System.Drawing.Point(7, 2);
-            this.skinPanel1.MouseBack = null;
-            this.skinPanel1.Name = "skinPanel1";
-            this.skinPanel1.NormlBack = null;
-            this.skinPanel1.Palace = true;
-            this.skinPanel1.Radius = 55;
-            this.skinPanel1.Size = new System.Drawing.Size(42, 41);
-            this.skinPanel1.TabIndex = 0;
+            this.skinLabel1.AutoSize = true;
+            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel1.BorderColor = System.Drawing.Color.Transparent;
+            this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabel1.ForeColor = System.Drawing.Color.White;
+            this.skinLabel1.Location = new System.Drawing.Point(32, 7);
+            this.skinLabel1.Name = "skinLabel1";
+            this.skinLabel1.Size = new System.Drawing.Size(140, 17);
+            this.skinLabel1.TabIndex = 1;
+            this.skinLabel1.Text = "欢迎您：成都新交所张三";
             // 
-            // superTabItem3
+            // symbolBox1
             // 
-            this.superTabItem3.AttachedControl = this.superTabControlPanel3;
-            this.superTabItem3.GlobalItem = false;
-            this.superTabItem3.Name = "superTabItem3";
-            this.superTabItem3.Symbol = "";
-            this.superTabItem3.Text = "内容管理";
+            this.symbolBox1.BackColor = System.Drawing.Color.Transparent;
             // 
-            // superTabControlPanel3
             // 
-            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(1015, 425);
-            this.superTabControlPanel3.TabIndex = 0;
-            this.superTabControlPanel3.TabItem = this.superTabItem3;
             // 
-            // superTabItem4
+            this.symbolBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.symbolBox1.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.symbolBox1.Location = new System.Drawing.Point(2, 5);
+            this.symbolBox1.Name = "symbolBox1";
+            this.symbolBox1.Size = new System.Drawing.Size(34, 23);
+            this.symbolBox1.Symbol = "";
+            this.symbolBox1.SymbolColor = System.Drawing.Color.GhostWhite;
+            this.symbolBox1.TabIndex = 2;
+            this.symbolBox1.Text = "symbolBox1";
             // 
-            this.superTabItem4.AttachedControl = this.superTabControlPanel4;
-            this.superTabItem4.GlobalItem = false;
-            this.superTabItem4.Name = "superTabItem4";
-            this.superTabItem4.Symbol = "";
-            this.superTabItem4.Text = "统计系统";
+            // line1
             // 
-            // superTabControlPanel4
-            // 
-            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel4.Name = "superTabControlPanel4";
-            this.superTabControlPanel4.Size = new System.Drawing.Size(1015, 425);
-            this.superTabControlPanel4.TabIndex = 0;
-            this.superTabControlPanel4.TabItem = this.superTabItem4;
-            // 
-            // superTabItem5
-            // 
-            this.superTabItem5.AttachedControl = this.superTabControlPanel5;
-            this.superTabItem5.GlobalItem = false;
-            this.superTabItem5.Name = "superTabItem5";
-            this.superTabItem5.Symbol = "";
-            this.superTabItem5.Text = "日志管理";
-            // 
-            // superTabControlPanel5
-            // 
-            this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel5.Name = "superTabControlPanel5";
-            this.superTabControlPanel5.Size = new System.Drawing.Size(902, 662);
-            this.superTabControlPanel5.TabIndex = 0;
-            this.superTabControlPanel5.TabItem = this.superTabItem5;
+            this.line1.Location = new System.Drawing.Point(7, 32);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(1010, 23);
+            this.line1.TabIndex = 3;
+            this.line1.Text = "line1";
             // 
             // backend
             // 
@@ -359,7 +447,9 @@ namespace managementBackend
             this.superTabControl1.ResumeLayout(false);
             this.superTabControlPanel1.ResumeLayout(false);
             this.div.ResumeLayout(false);
+            this.panelEx1.ResumeLayout(false);
             this.topDiv.ResumeLayout(false);
+            this.topDiv.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
