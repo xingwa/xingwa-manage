@@ -1,0 +1,14 @@
+D:\xingwa-manage\digFaimilys\NovelManage\bin\Release\NovelManage.dll
+D:\xingwa-manage\digFaimilys\NovelManage\bin\Release\NovelManage.pdb
+D:\xingwa-manage\digFaimilys\NovelManage\obj\Release\NovelManage.csproj.CoreCompileInputs.cache
+D:\xingwa-manage\digFaimilys\NovelManage\obj\Release\NovelManage.dll
+D:\xingwa-manage\digFaimilys\NovelManage\obj\Release\NovelManage.pdb
+D:\xingwa-manage\digFaimilys\NovelManage\bin\Release\DevComponents.DotNetBar2.dll
+D:\xingwa-manage\digFaimilys\NovelManage\bin\Release\photoApp.dll
+D:\xingwa-manage\digFaimilys\NovelManage\bin\Release\workfere.dll
+D:\xingwa-manage\digFaimilys\NovelManage\bin\Release\photoApp.pdb
+D:\xingwa-manage\digFaimilys\NovelManage\bin\Release\workfere.pdb
+D:\xingwa-manage\digFaimilys\NovelManage\obj\Release\NovelManage.csprojAssemblyReference.cache
+D:\xingwa-manage\digFaimilys\NovelManage\obj\Release\NovelManage.novel.resources
+D:\xingwa-manage\digFaimilys\NovelManage\obj\Release\NovelManage.csproj.GenerateResource.cache
+D:\xingwa-manage\digFaimilys\NovelManage\obj\Release\NovelManage.csproj.CopyComplete

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "managementBackend", "manage
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "workfere", "workfere\workfere.csproj", "{C1323F07-2264-4C1F-A74E-2021C08999EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovelManage", "NovelManage\NovelManage.csproj", "{96926CE3-8FF0-48AC-901C-2E90E58835D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C1323F07-2264-4C1F-A74E-2021C08999EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1323F07-2264-4C1F-A74E-2021C08999EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1323F07-2264-4C1F-A74E-2021C08999EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96926CE3-8FF0-48AC-901C-2E90E58835D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96926CE3-8FF0-48AC-901C-2E90E58835D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96926CE3-8FF0-48AC-901C-2E90E58835D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96926CE3-8FF0-48AC-901C-2E90E58835D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

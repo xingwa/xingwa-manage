@@ -30,3 +30,5 @@ G:\VS\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.
 G:\VS\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.csproj.CoreCompileInputs.cache
 G:\VS\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.dll
 G:\VS\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.pdb
+D:\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.Demo.resources
+D:\xingwa-manage\digFaimilys\managementBackend\obj\Release\managementBackend.csprojAssemblyReference.cache
