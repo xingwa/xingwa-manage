@@ -4,11 +4,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CefSharp;
+using CefSharp.WinForms;
 
 namespace managementBackend
 {
     public class backend : iform.AppForm
     {
+        private ChromiumWebBrowser CWebBrowser;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Panel divMain;
         private System.Windows.Forms.StatusStrip statusStripDiv;
@@ -16,12 +19,11 @@ namespace managementBackend
         private xingwaWinFormUI.SkinControl.SkinLabel skinLabelName;
         private DevComponents.DotNetBar.Controls.SymbolBox symbolBox1;
         private System.Windows.Forms.Panel div;
-        private DevComponents.DotNetBar.PanelEx panelEx3;
+        private DevComponents.DotNetBar.PanelEx CWebBrowserDiv;
         private DevComponents.DotNetBar.ExpandableSplitter expandableSplitter1;
         private DevComponents.DotNetBar.PanelEx panelEx1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private DevComponents.DotNetBar.Controls.Line lineDiv;
 
 
@@ -52,24 +54,22 @@ namespace managementBackend
             this.statusStripDiv = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.divMain = new System.Windows.Forms.Panel();
-            this.topDiv = new DevComponents.DotNetBar.PanelEx();
-            this.lineDiv = new DevComponents.DotNetBar.Controls.Line();
-            this.skinLabelName = new xingwaWinFormUI.SkinControl.SkinLabel();
-            this.symbolBox1 = new DevComponents.DotNetBar.Controls.SymbolBox();
             this.div = new System.Windows.Forms.Panel();
-            this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
+            this.CWebBrowserDiv = new DevComponents.DotNetBar.PanelEx();
             this.expandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.panel1 = new System.Windows.Forms.Panel();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.topDiv = new DevComponents.DotNetBar.PanelEx();
+            this.lineDiv = new DevComponents.DotNetBar.Controls.Line();
+            this.skinLabelName = new xingwaWinFormUI.SkinControl.SkinLabel();
+            this.symbolBox1 = new DevComponents.DotNetBar.Controls.SymbolBox();
             this.statusStripDiv.SuspendLayout();
             this.divMain.SuspendLayout();
-            this.topDiv.SuspendLayout();
             this.div.SuspendLayout();
-            this.panelEx3.SuspendLayout();
             this.panelEx1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.topDiv.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStripDiv
@@ -101,73 +101,9 @@ namespace managementBackend
             this.divMain.Size = new System.Drawing.Size(1022, 677);
             this.divMain.TabIndex = 1;
             // 
-            // topDiv
-            // 
-            this.topDiv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.topDiv.CanvasColor = System.Drawing.SystemColors.Control;
-            this.topDiv.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
-            this.topDiv.Controls.Add(this.lineDiv);
-            this.topDiv.Controls.Add(this.skinLabelName);
-            this.topDiv.Controls.Add(this.symbolBox1);
-            this.topDiv.DisabledBackColor = System.Drawing.Color.Empty;
-            this.topDiv.Location = new System.Drawing.Point(2, 23);
-            this.topDiv.Name = "topDiv";
-            this.topDiv.Size = new System.Drawing.Size(1019, 46);
-            this.topDiv.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.topDiv.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(150)))), ((int)(((byte)(178)))));
-            this.topDiv.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(206)))), ((int)(((byte)(219)))));
-            this.topDiv.Style.BorderColor.Color = System.Drawing.Color.Transparent;
-            this.topDiv.Style.BorderWidth = 0;
-            this.topDiv.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.topDiv.Style.GradientAngle = 90;
-            this.topDiv.TabIndex = 2;
-            this.topDiv.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topDiv_MouseDown);
-            // 
-            // lineDiv
-            // 
-            this.lineDiv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lineDiv.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lineDiv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(170)))), ((int)(((byte)(192)))));
-            this.lineDiv.Location = new System.Drawing.Point(-2, 41);
-            this.lineDiv.Name = "lineDiv";
-            this.lineDiv.Size = new System.Drawing.Size(1016, 3);
-            this.lineDiv.TabIndex = 3;
-            // 
-            // skinLabelName
-            // 
-            this.skinLabelName.AutoSize = true;
-            this.skinLabelName.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabelName.BorderColor = System.Drawing.Color.Transparent;
-            this.skinLabelName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabelName.ForeColor = System.Drawing.Color.White;
-            this.skinLabelName.Location = new System.Drawing.Point(32, 7);
-            this.skinLabelName.Name = "skinLabelName";
-            this.skinLabelName.Size = new System.Drawing.Size(140, 17);
-            this.skinLabelName.TabIndex = 1;
-            this.skinLabelName.Text = "欢迎您：成都新交所张三";
-            this.skinLabelName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinLabelName_MouseDown);
-            // 
-            // symbolBox1
-            // 
-            this.symbolBox1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.symbolBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.symbolBox1.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.symbolBox1.Location = new System.Drawing.Point(2, 5);
-            this.symbolBox1.Name = "symbolBox1";
-            this.symbolBox1.Size = new System.Drawing.Size(34, 23);
-            this.symbolBox1.Symbol = "";
-            this.symbolBox1.SymbolColor = System.Drawing.Color.GhostWhite;
-            this.symbolBox1.TabIndex = 2;
-            this.symbolBox1.Text = "symbolBox1";
-            // 
             // div
             // 
-            this.div.Controls.Add(this.panelEx3);
+            this.div.Controls.Add(this.CWebBrowserDiv);
             this.div.Controls.Add(this.expandableSplitter1);
             this.div.Controls.Add(this.panelEx1);
             this.div.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -176,23 +112,22 @@ namespace managementBackend
             this.div.Size = new System.Drawing.Size(1022, 677);
             this.div.TabIndex = 1;
             // 
-            // panelEx3
+            // CWebBrowserDiv
             // 
-            this.panelEx3.Controls.Add(this.webBrowser1);
-            this.panelEx3.DisabledBackColor = System.Drawing.Color.Empty;
-            this.panelEx3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEx3.Location = new System.Drawing.Point(157, 0);
-            this.panelEx3.Name = "panelEx3";
-            this.panelEx3.Size = new System.Drawing.Size(865, 677);
-            this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx3.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.panelEx3.Style.BackColor2.Color = System.Drawing.Color.White;
-            this.panelEx3.Style.BackgroundImagePosition = DevComponents.DotNetBar.eBackgroundImagePosition.Tile;
-            this.panelEx3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.panelEx3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.panelEx3.Style.GradientAngle = 90;
-            this.panelEx3.TabIndex = 2;
-            this.panelEx3.Text = "Fill Panel";
+            this.CWebBrowserDiv.DisabledBackColor = System.Drawing.Color.Empty;
+            this.CWebBrowserDiv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CWebBrowserDiv.Location = new System.Drawing.Point(157, 0);
+            this.CWebBrowserDiv.Name = "CWebBrowserDiv";
+            this.CWebBrowserDiv.Size = new System.Drawing.Size(865, 677);
+            this.CWebBrowserDiv.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.CWebBrowserDiv.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.CWebBrowserDiv.Style.BackColor2.Color = System.Drawing.Color.White;
+            this.CWebBrowserDiv.Style.BackgroundImagePosition = DevComponents.DotNetBar.eBackgroundImagePosition.Tile;
+            this.CWebBrowserDiv.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.CWebBrowserDiv.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.CWebBrowserDiv.Style.GradientAngle = 90;
+            this.CWebBrowserDiv.TabIndex = 2;
+            this.CWebBrowserDiv.Text = "Fill Panel";
             // 
             // expandableSplitter1
             // 
@@ -201,26 +136,26 @@ namespace managementBackend
             this.expandableSplitter1.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.None;
             this.expandableSplitter1.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.None;
             this.expandableSplitter1.ExpandableControl = this.panelEx1;
-            this.expandableSplitter1.ExpandFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(181)))), ((int)(((byte)(226)))));
+            this.expandableSplitter1.ExpandFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(142)))), ((int)(((byte)(75)))));
             this.expandableSplitter1.ExpandFillColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground;
-            this.expandableSplitter1.ExpandLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            this.expandableSplitter1.ExpandLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
             this.expandableSplitter1.ExpandLineColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBorder;
             this.expandableSplitter1.ForeColor = System.Drawing.Color.Black;
-            this.expandableSplitter1.GripDarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            this.expandableSplitter1.GripDarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
             this.expandableSplitter1.GripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBorder;
-            this.expandableSplitter1.GripLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(249)))));
+            this.expandableSplitter1.GripLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.expandableSplitter1.GripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuBackground;
-            this.expandableSplitter1.HotBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(230)))), ((int)(((byte)(232)))));
+            this.expandableSplitter1.HotBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(140)))));
             this.expandableSplitter1.HotBackColor2 = System.Drawing.Color.Empty;
             this.expandableSplitter1.HotBackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.None;
             this.expandableSplitter1.HotBackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemCheckedBackground;
-            this.expandableSplitter1.HotExpandFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(181)))), ((int)(((byte)(226)))));
+            this.expandableSplitter1.HotExpandFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(142)))), ((int)(((byte)(75)))));
             this.expandableSplitter1.HotExpandFillColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground;
-            this.expandableSplitter1.HotExpandLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            this.expandableSplitter1.HotExpandLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
             this.expandableSplitter1.HotExpandLineColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBorder;
-            this.expandableSplitter1.HotGripDarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(111)))));
+            this.expandableSplitter1.HotGripDarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
             this.expandableSplitter1.HotGripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBorder;
-            this.expandableSplitter1.HotGripLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(249)))));
+            this.expandableSplitter1.HotGripLightColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.expandableSplitter1.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuBackground;
             this.expandableSplitter1.Location = new System.Drawing.Point(152, 0);
             this.expandableSplitter1.MinExtra = 10;
@@ -298,14 +233,69 @@ namespace managementBackend
             this.treeView1.Size = new System.Drawing.Size(146, 667);
             this.treeView1.TabIndex = 1;
             // 
-            // webBrowser1
+            // topDiv
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(5, 6);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(852, 665);
-            this.webBrowser1.TabIndex = 4;
-            this.webBrowser1.Url = new System.Uri("http://www.baidu.com", System.UriKind.Absolute);
+            this.topDiv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.topDiv.CanvasColor = System.Drawing.SystemColors.Control;
+            this.topDiv.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014;
+            this.topDiv.Controls.Add(this.lineDiv);
+            this.topDiv.Controls.Add(this.skinLabelName);
+            this.topDiv.Controls.Add(this.symbolBox1);
+            this.topDiv.DisabledBackColor = System.Drawing.Color.Empty;
+            this.topDiv.Location = new System.Drawing.Point(2, 23);
+            this.topDiv.Name = "topDiv";
+            this.topDiv.Size = new System.Drawing.Size(1019, 46);
+            this.topDiv.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.topDiv.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(150)))), ((int)(((byte)(178)))));
+            this.topDiv.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(206)))), ((int)(((byte)(219)))));
+            this.topDiv.Style.BorderColor.Color = System.Drawing.Color.Transparent;
+            this.topDiv.Style.BorderWidth = 0;
+            this.topDiv.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.topDiv.Style.GradientAngle = 90;
+            this.topDiv.TabIndex = 2;
+            this.topDiv.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topDiv_MouseDown);
+            // 
+            // lineDiv
+            // 
+            this.lineDiv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineDiv.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.lineDiv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(170)))), ((int)(((byte)(192)))));
+            this.lineDiv.Location = new System.Drawing.Point(-2, 41);
+            this.lineDiv.Name = "lineDiv";
+            this.lineDiv.Size = new System.Drawing.Size(1016, 3);
+            this.lineDiv.TabIndex = 3;
+            // 
+            // skinLabelName
+            // 
+            this.skinLabelName.AutoSize = true;
+            this.skinLabelName.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabelName.BorderColor = System.Drawing.Color.Transparent;
+            this.skinLabelName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinLabelName.ForeColor = System.Drawing.Color.White;
+            this.skinLabelName.Location = new System.Drawing.Point(32, 7);
+            this.skinLabelName.Name = "skinLabelName";
+            this.skinLabelName.Size = new System.Drawing.Size(140, 17);
+            this.skinLabelName.TabIndex = 1;
+            this.skinLabelName.Text = "欢迎您：成都新交所张三";
+            this.skinLabelName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.skinLabelName_MouseDown);
+            // 
+            // symbolBox1
+            // 
+            this.symbolBox1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.symbolBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.symbolBox1.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.symbolBox1.Location = new System.Drawing.Point(2, 5);
+            this.symbolBox1.Name = "symbolBox1";
+            this.symbolBox1.Size = new System.Drawing.Size(34, 23);
+            this.symbolBox1.Symbol = "";
+            this.symbolBox1.SymbolColor = System.Drawing.Color.GhostWhite;
+            this.symbolBox1.TabIndex = 2;
+            this.symbolBox1.Text = "symbolBox1";
             // 
             // backend
             // 
@@ -317,23 +307,35 @@ namespace managementBackend
             this.Name = "backend";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "测试系统";
+
             this.statusStripDiv.ResumeLayout(false);
             this.statusStripDiv.PerformLayout();
             this.divMain.ResumeLayout(false);
-            this.topDiv.ResumeLayout(false);
-            this.topDiv.PerformLayout();
             this.div.ResumeLayout(false);
-            this.panelEx3.ResumeLayout(false);
             this.panelEx1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.topDiv.ResumeLayout(false);
+            this.topDiv.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        public void winformShow()
+        public void winformShow(ChromiumWebBrowser cwebBrowser)
         {
+           
+
             InitializeComponent();
+
+            CWebBrowser = cwebBrowser;
+            CWebBrowser.Load("www.baidu.com");
+
+
+
+            CWebBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            CWebBrowser.LifeSpanHandler = new OpenPageSelf();
+            this.CWebBrowserDiv.Controls.Add(CWebBrowser);
+
 
             this.CloseNormlBack = photoApp.Properties.Resources.btn_close_disable;
             this.CloseDownBack = photoApp.Properties.Resources.btn_close_down;
@@ -367,6 +369,8 @@ namespace managementBackend
 
             this.ControlBoxOffset = new System.Drawing.Point(0, -1);
             this.DoubleBuffered = true;
+
+
     
             this.SuspendLayout();
             this.ClientSize = new System.Drawing.Size(1024, 768);
@@ -389,5 +393,7 @@ namespace managementBackend
         {
             user128.sendMessage(this.Handle);
         }
+
+       
     }
 }

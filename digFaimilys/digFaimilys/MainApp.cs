@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CefSharp;
+using CefSharp.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,10 @@ namespace digFaimilys
         public MainApp()
         {
             InitializeComponent();
+            CefSettings settings = new CefSettings();
+            settings.Locale = "zh-CN";
+            settings.AcceptLanguageList = "zh-CN";
+            Cef.Initialize(settings);
         }
 
         private void MainApp_Load(object sender, EventArgs e)
@@ -100,14 +106,30 @@ namespace digFaimilys
             xingwaWinFormUI.SkinControl.SkinPanel obj = (xingwaWinFormUI.SkinControl.SkinPanel)sender;
             if ( int.Parse( obj.Tag.ToString()) == 2)
             {
-            
+
+                try
+                {
+                  //  Cef.Shutdown();
+                }
+                catch (Exception)
+                {
+
+                   // throw;
+                }
+
+              
+
+                 ChromiumWebBrowser CWebBrowser  =  new ChromiumWebBrowser(null); ;
+
+      
 
                 string dllPath = "managementBackend.dll";
                 Assembly assembly = Assembly.LoadFile(Environment.CurrentDirectory + "\\" + dllPath);
                 Type type = assembly.GetType("managementBackend.backend");
                 object o = Activator.CreateInstance(type);
                 MethodInfo method = type.GetMethod("winformShow");
-                method.Invoke(o, null);
+                object[] objs = { CWebBrowser };
+                method.Invoke(o, objs);
 
 
                 //                assembly asm = assembly.loadfrom(appdomain.currentdomain.basedirectory + "/declaredll/yundoutaxlib.dll");////我们要调用的dll文件路径
