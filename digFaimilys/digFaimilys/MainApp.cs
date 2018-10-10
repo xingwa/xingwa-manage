@@ -21,6 +21,9 @@ namespace digFaimilys
             CefSettings settings = new CefSettings();
             settings.Locale = "zh-CN";
             settings.AcceptLanguageList = "zh-CN";
+            settings.CefCommandLineArgs.Add("enable-media-stream", "1");
+            settings.CefCommandLineArgs.Add("no-proxy-server", "1");
+            settings.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36";
             Cef.Initialize(settings);
         }
 
